@@ -1,0 +1,11 @@
+<div class="dropdown">
+    <button (click)="toggleDropdown()" class="dropdown-btn">
+      {{ selectedOption?.name || 'Select Workout Type' }}
+    </button>
+    <ul *ngIf="isDropdownOpen" class="dropdown-list w-full bg-gray-300 border-1 border-gray-400 border-solid text-[16px]">
+      <li class=" px-2 py-2 border-1 border-gray-400 border-solid" *ngFor="let option of options" (click)="selectOption(option)">
+        {{ option.name }}
+      </li>
+    </ul>
+  </div>
+  

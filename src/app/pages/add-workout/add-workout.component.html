@@ -1,0 +1,21 @@
+<div class="add-container flex p-6 w-full h-full justify-center items-center">
+
+    <div class="container flex gap-8 h-fit">
+        <div [formGroup] = "accountform" class="left-section flex flex-col flex-1 gap-y-4">
+            <h1 class="text-5xl font-bold"><span class="text-blue-600">Health</span> Challenge Tracker</h1>
+            <p>Manage your workouts easily!</p>
+
+            <input id="name" formControlName="name" type="text" class="input" placeholder="Name">
+            <p class="workoutword text-gray-500">Workout Type</p>
+            <app-dropdown formControlName="workouttype"></app-dropdown>
+            <input id="duration" formControlName="duration" type="text" class="input" 
+            placeholder="Workout Time (in minutes)">
+
+            <button (click)="AddWorkout()" class="btn h-[50px] w-[250px] bg-gray-300
+             text-blue-600 [10px] rounded-md hover:bg-gray-400">Add Workout</button>
+        </div>
+        <div class="right-section flex flex-1">
+            <img src="https://media.istockphoto.com/id/1368524404/vector/vector-illustration-material-people-set-to-enjoy-sports-and-fitness.jpg?s=612x612&w=0&k=20&c=YiDWs5lSBwrKjLrUmtAi0R9Yrx327HvwkEAaSnnj3UQ=" alt="workout" class="w-full h-full">
+        </div>
+    </div>
+</div>

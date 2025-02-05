@@ -1,0 +1,67 @@
+/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+.input{
+    padding: auto;
+    margin: 5px;
+    font-size: 18px;
+    border-radius: 5px;
+  }
+  .workoutword{
+    padding: auto;
+    margin: 5px;
+    font-size: 18px;
+    border-radius: 5px;
+  }
+
+  .btn{
+    padding: auto;
+    cursor: pointer;  
+    font-size: 20px; 
+  }
+
+  button{
+    &:disabled{
+        cursor: pointer;
+        background-color: black;
+    }
+  }
+  .btn-warning{
+    @apply border-solid border-1 border-red-500 w-fit px-1 py-1 rounded-lg
+    text-red-500 bg-blue-200 hover:bg-red-500 text-[15px] hover:text-white
+
+  }
+  .input-form, .text-input-container{
+    @apply w-full;
+  }
+  .red-bg{
+    @apply bg-red-500;
+  }
+  .red-text{
+    @apply text-red-500;
+  }
+  .amber-bg{
+    @apply bg-amber-700;
+  }
+  .amber-text{
+    @apply text-amber-700;
+  }
+  .amber-border{
+    @apply border-amber-700;
+  }
+  .blue-text{
+    @apply text-blue-500;
+  }
+    .blue-bg{
+        @apply bg-blue-500;
+    }
+    .blue-border{
+        @apply border-blue-500;
+    }
+}
