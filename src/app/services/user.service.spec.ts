@@ -27,14 +27,14 @@ describe('UserService', () => {
 
   it('should retrieve a workout from local storage', () => {
     service.AddWorkout('John', 'Running', 30);
-    const storedWorkouts = service.getWorkout();
-    expect(storedWorkouts[0].name).toBe('John');
+    const storedWorkout = service.getWorkout();
+    expect(storedWorkout.name).toBe('John');
   });
 
   it('should delete a workout and navigate', () => {
     service.AddWorkout('John', 'Running', 30);
-    service.deleteWorkout(service.workouts[0].id);
-    expect(localStorage.getItem(service.WORKOUTS_key)).toBeNull();
+    service.deleteWorkout();
+    expect(localStorage.getItem(service.USER)).toBeNull();
     expect(router.navigate).toHaveBeenCalledWith(['/add-workout']);
   });
 
